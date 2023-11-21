@@ -7,3 +7,10 @@ bool MakeupWord(const std::string& randomLetter, const std::string& paper) {
     for (auto c : paper) {
         letterCount[c]++;
     }
+
+    for (auto c : randomLetter) {
+        if (letterCount[c] <= 0) {
+            return false;
+        }
+        letterCount[c]--;
+    }
