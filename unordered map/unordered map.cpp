@@ -14,3 +14,11 @@ bool MakeupWord(const std::string& randomLetter, const std::string& paper) {
         }
         letterCount[c]--;
     }
+
+    return true;
+}
+
+int main() {
+    std::cout << MakeupWord("aa", "ab") << "\n";
+    std::cout << MakeupWord("aa", "aab") << "\n";
+}
